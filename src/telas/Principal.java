@@ -5,10 +5,6 @@
  */
 package telas;
 
-/**
- *
- * @author Aluno
- */
 public class Principal extends javax.swing.JFrame {
 
     /**
@@ -50,21 +46,21 @@ public class Principal extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(122, 72, 221));
 
-        SairjButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/telas/Shutdown_20px.png"))); // NOI18N
+        SairjButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/Shutdown_20px.png"))); // NOI18N
         SairjButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SairjButtonActionPerformed(evt);
             }
         });
 
-        vendajButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/telas/Shopping Cart_20px.png"))); // NOI18N
+        vendajButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/Shopping Cart_20px.png"))); // NOI18N
         vendajButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 vendajButtonActionPerformed(evt);
             }
         });
 
-        CadastrojButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/telas/Create_20px.png"))); // NOI18N
+        CadastrojButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/Create_20px.png"))); // NOI18N
         CadastrojButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CadastrojButtonActionPerformed(evt);
@@ -128,8 +124,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_SairjButtonActionPerformed
 
     private void vendajButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vendajButtonActionPerformed
-        // TODO add your handling code here:
-        
+ 
         Venda objvenda = new Venda(this,true);     
         objvenda.setVisible(true);
     }//GEN-LAST:event_vendajButtonActionPerformed

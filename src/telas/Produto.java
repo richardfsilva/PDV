@@ -11,10 +11,6 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import repositorio.Repositorio;
 
-/**
- *
- * @author Aluno
- */
 public class Produto extends javax.swing.JDialog {
 
   
@@ -56,12 +52,6 @@ public class Produto extends javax.swing.JDialog {
         quantidadejLabel.setForeground(new java.awt.Color(240, 240, 240));
         quantidadejLabel.setText("QUANTIDADE");
 
-        PrecojTextField.setEnabled(false);
-        PrecojTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PrecojTextFieldActionPerformed(evt);
-            }
-        });
 
         PrecojLabel.setForeground(new java.awt.Color(240, 240, 240));
         PrecojLabel.setText(" PREÇO");
@@ -69,19 +59,7 @@ public class Produto extends javax.swing.JDialog {
         DescricaojLabel.setForeground(new java.awt.Color(240, 240, 240));
         DescricaojLabel.setText(" DESCRIÇÃO");
 
-        PratosjTextField.setEnabled(false);
-        PratosjTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PratosjTextFieldActionPerformed(evt);
-            }
-        });
 
-        DescricaojTextField.setEnabled(false);
-        DescricaojTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DescricaojTextFieldActionPerformed(evt);
-            }
-        });
 
         PratosjLabel.setForeground(new java.awt.Color(240, 240, 240));
         PratosjLabel.setText(" PRATOS");
@@ -146,14 +124,14 @@ public class Produto extends javax.swing.JDialog {
         ));
         jScrollPane1.setViewportView(CadastrojTable);
 
-        NovojButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/telas/Plus_20px.png"))); // NOI18N
+        NovojButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/Plus_20px.png"))); // NOI18N
         NovojButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NovojButtonActionPerformed(evt);
             }
         });
 
-        CadastrarjButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/telas/Add Database_20px.png"))); // NOI18N
+        CadastrarjButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/Add Database_20px.png"))); // NOI18N
         CadastrarjButton.setEnabled(false);
         CadastrarjButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -161,7 +139,7 @@ public class Produto extends javax.swing.JDialog {
             }
         });
 
-        LimparjButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/telas/Broom_20px.png"))); // NOI18N
+        LimparjButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/Broom_20px.png"))); // NOI18N
         LimparjButton.setEnabled(false);
         LimparjButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -260,11 +238,6 @@ public class Produto extends javax.swing.JDialog {
         CadastrojTable.setModel(modelo);
     }
     
-    
-    private void PratosjTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PratosjTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PratosjTextFieldActionPerformed
-
     private void NovojButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NovojButtonActionPerformed
         // TODO add your handling code here:
 
@@ -279,10 +252,6 @@ public class Produto extends javax.swing.JDialog {
 
     }//GEN-LAST:event_NovojButtonActionPerformed
 
-    private void DescricaojTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescricaojTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_DescricaojTextFieldActionPerformed
-
     private void LimparjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LimparjButtonActionPerformed
         // TODO add your handling code here:
 
@@ -292,11 +261,6 @@ public class Produto extends javax.swing.JDialog {
         quantidadejTextField.setText("");
 
     }//GEN-LAST:event_LimparjButtonActionPerformed
-
-    private void PrecojTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrecojTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PrecojTextFieldActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton CadastrarjButton;

@@ -9,10 +9,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/**
- *
- * @author Aluno
- */
 public class Conexao {
     private static final String USUARIO = "root";
     private static final String SENHA = "";

@@ -7,15 +7,9 @@ package telas;
 
 import classes.Cliente;
 import java.util.ArrayList;
-import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import repositorio.Repositorio;
-import repositorio.RepositorioVendas;
 
-/**
- *
- * @author Aluno
- */
 public class Venda extends javax.swing.JDialog {
 
     int flag = 1;
@@ -80,12 +74,6 @@ public class Venda extends javax.swing.JDialog {
         precounitariojLabel.setFont(new java.awt.Font("Arabic Typesetting", 3, 24)); // NOI18N
         precounitariojLabel.setForeground(new java.awt.Color(255, 255, 255));
         precounitariojLabel.setText("Preço unitario");
-
-        totaljTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                totaljTextField1ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -165,11 +153,7 @@ public class Venda extends javax.swing.JDialog {
                 return canEdit [columnIndex];
             }
         });
-        vendajTable.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                vendajTableMouseClicked(evt);
-            }
-        });
+        
         jScrollPane1.setViewportView(vendajTable);
 
         finalizarvendajButton.setText("Finalizar Venda");
@@ -179,7 +163,7 @@ public class Venda extends javax.swing.JDialog {
             }
         });
 
-        pesquisajButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/telas/Search_15px.png"))); // NOI18N
+        pesquisajButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/Search_15px.png"))); // NOI18N
         pesquisajButton.setToolTipText("Pesquisar produto");
         pesquisajButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -277,30 +261,20 @@ public class Venda extends javax.swing.JDialog {
         pesquisajTextField.setText("");
     }//GEN-LAST:event_finalizarvendajButtonActionPerformed
 
-    private void vendajTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_vendajTableMouseClicked
-        // TODO add your handling code here:
-       
-    }//GEN-LAST:event_vendajTableMouseClicked
-
-    private void totaljTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_totaljTextField1ActionPerformed
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_totaljTextField1ActionPerformed
-
     private void gerartrocojButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gerartrocojButtonActionPerformed
-        // TODO add your handling code here:
-        float troco;
+        
+    	float troco;
         troco = Float.parseFloat(dinheirojTextField.getText()) - Float.parseFloat(totaljTextField1.getText());
         trocojTextField.setText(String.valueOf(troco));
     }//GEN-LAST:event_gerartrocojButtonActionPerformed
 
     public void pesquisarPratos(String nomePesquisa) {
-        Repositorio objRepositorioUsuario = new Repositorio();
+        Repositorio objRepositorio = new Repositorio();
         ArrayList<Cliente> listaCliente = new ArrayList<>();
 
-        objRepositorioUsuario.setCode(Integer.parseInt(nomePesquisa));
+        objRepositorio.setCode(Integer.parseInt(nomePesquisa));
 
-        listaCliente = objRepositorioUsuario.retornar(objRepositorioUsuario);
+        listaCliente = objRepositorio.retornar(objRepositorio);
 
         for (int a = 0; a < listaCliente.size(); a++) {
             String[] novoUsuario = new String[5];
